@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Quote - Dhiman Welding Works</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Dhiman Welding Works" class="logo-img">
+                <span class="logo-text">Dhiman Welding Works</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <!-- <a href="clients.html" class="nav-link">Clients</a> -->
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title animate-fade-up">Request Quote</h1>
+                <p class="page-subtitle animate-fade-up" style="animation-delay: 0.2s;">
+                    Get a customized quote for your industrial equipment needs
+                </p>
+                <div class="breadcrumb animate-fade-up" style="animation-delay: 0.4s;">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Enquiry</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content">
+                <div class="quote-info animate-fade-left">
+                    <h2>Why Choose Our Quote?</h2>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Quick Response</h3>
+                                <p>Get your quote within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calculator"></i>
+                            <div>
+                                <h3>Accurate Pricing</h3>
+                                <p>Detailed breakdown of all costs</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-cogs"></i>
+                            <div>
+                                <h3>Custom Solutions</h3>
+                                <p>Tailored to your specific needs</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h3>Expert Consultation</h3>
+                                <p>Free technical consultation included</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-form-container animate-fade-right">
+                    <div class="form-container">
+                        <h2 class="form-title">Request Your Quote</h2>
+                        <p class="form-subtitle">
+                            Fill out the form below and we'll provide you with a detailed quote
+                        </p>
+                        
+                        <form class="quote-form" id="quote-form">
+                            <div class="form-section">
+                                <h3 class="section-title">Contact Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company">Company Name *</label>
+                                    <input type="text" id="company" name="company" required>
+                                    <div class="form-error"></div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="industry">Industry *</label>
+                                        <select id="industry" name="industry" required>
+                                            <option value="">Select Industry</option>
+                                            <option value="foundry">Foundry</option>
+                                            <option value="steel">Steel Manufacturing</option>
+                                            <option value="chemical">Chemical Processing</option>
+                                            <option value="power">Power Generation</option>
+                                            <option value="automotive">Automotive</option>
+                                            <option value="textile">Textile</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location">Location *</label>
+                                        <input type="text" id="location" name="location" placeholder="City, State" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3 class="section-title">Product Requirements</h3>
+                                <div class="form-group">
+                                    <label for="productType">Product Type *</label>
+                                    <select id="productType" name="productType" required>
+                                        <option value="">Select Product</option>
+                                        <option value="apcd">Air Pollution Control Devices</option>
+                                        <option value="cupola">Cupola Furnace</option>
+                                        <option value="blower">Blower & I.D. Fan</option>
+                                        <option value="oil-tank">Oil Storage Tank</option>
+                                        <option value="chimney">Chimney</option>
+                                        <option value="ladle">Ladle</option>
+                                        <option value="sand-mixture">Sand Mixture Machine</option>
+                                        <option value="fuel-saving">Fuel Saving Device</option>
+                                        <option value="muller">Muller Machine</option>
+                                        <option value="custom">Custom Solution</option>
+                                    </select>
+                                    <div class="form-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="quantity">Quantity *</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" required>
+                                    <div class="form-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="specifications">Technical Specifications</label>
+                                    <textarea id="specifications" name="specifications" rows="4" placeholder="Please provide detailed technical specifications, capacity requirements, materials, etc."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="timeline">Required Timeline</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Select Timeline</option>
+                                        <option value="urgent">Urgent (1-2 weeks)</option>
+                                        <option value="standard">Standard (4-6 weeks)</option>
+                                        <option value="flexible">Flexible (8+ weeks)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3 class="section-title">Additional Information</h3>
+                                <div class="form-group">
+                                    <label for="budget">Budget Range</label>
+                                    <select id="budget" name="budget">
+                                        <option value="">Select Budget Range</option>
+                                        <option value="under-1lakh">Under ₹1 Lakh</option>
+                                        <option value="1-5lakh">₹1-5 Lakhs</option>
+                                        <option value="5-10lakh">₹5-10 Lakhs</option>
+                                        <option value="10-25lakh">₹10-25 Lakhs</option>
+                                        <option value="25-50lakh">₹25-50 Lakhs</option>
+                                        <option value="above-50lakh">Above ₹50 Lakhs</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="additionalInfo">Additional Information</label>
+                                    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any additional requirements, special considerations, or questions..."></textarea>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="installation" name="installation">
+                                        <span class="checkmark"></span>
+                                        I require installation and commissioning services
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="maintenance" name="maintenance">
+                                        <span class="checkmark"></span>
+                                        I'm interested in maintenance and support services
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <span class="checkmark"></span>
+                                        Subscribe to our newsletter for updates and industry insights
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <span class="checkmark"></span>
+                                        I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a> *
+                                    </label>
+                                    <div class="form-error"></div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large form-submit">
+                                <span>Request Quote</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fade-up">Our Quote Process</h2>
+                <p class="section-subtitle animate-fade-up" style="animation-delay: 0.2s;">
+                    Simple steps to get your customized quote
+                </p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Submit Request</h3>
+                        <p>Fill out our detailed quote form with your requirements</p>
+                    </div>
+                </div>
+                <div class="process-step animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Technical Review</h3>
+                        <p>Our engineering team reviews your specifications</p>
+                    </div>
+                </div>
+                <div class="process-step animate-fade-up" style="animation-delay: 0.3s;">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Quote Preparation</h3>
+                        <p>We prepare a detailed quote with pricing and timeline</p>
+                    </div>
+                </div>
+                <div class="process-step animate-fade-up" style="animation-delay: 0.4s;">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Quote Delivery</h3>
+                        <p>Receive your customized quote within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title animate-fade-up">Need Immediate Assistance?</h2>
+                <p class="cta-subtitle animate-fade-up" style="animation-delay: 0.2s;">
+                    Contact us directly for urgent requirements or technical consultation
+                </p>
+                <div class="cta-buttons animate-fade-up" style="animation-delay: 0.4s;">
+                    <a href="tel:+91-XXX-XXXX-XXX" class="btn btn-primary btn-large">
+                        <span>Call Now</span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <span>Contact Us</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Dhiman Welding Works" class="footer-logo-img">
+                        <span class="footer-logo-text">Dhiman Welding Works</span>
+                    </div>
+                    <p class="footer-description">
+                        Leading manufacturer of air pollution control devices and industrial equipment 
+                        with over 35 years of experience and excellence.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#apcd">Air Pollution Control</a></li>
+                        <li><a href="products.html#cupola">Cupola Furnace</a></li>
+                        <li><a href="products.html#blower">Blower & I.D. Fan</a></li>
+                        <li><a href="products.html#oil-tank">Oil Storage Tank</a></li>
+                        <li><a href="products.html#chimney">Chimney</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Industrial Area, Punjab, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-XXX-XXXX-XXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@sohanpalmechanical.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dhiman Welding Works. All rights reserved.</p>
+                <p>Designed with ❤️ for excellence in manufacturing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

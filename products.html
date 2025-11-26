@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Dhiman Welding Works</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Dhiman Welding Works" class="logo-img">
+                <span class="logo-text">Dhiman Welding Works</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <!-- <a href="clients.html" class="nav-link">Clients</a> -->
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title animate-fade-up">Our Products</h1>
+                <p class="page-subtitle animate-fade-up" style="animation-delay: 0.2s;">
+                    Comprehensive range of industrial equipment and air pollution control devices
+                </p>
+                <div class="breadcrumb animate-fade-up" style="animation-delay: 0.4s;">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Overview -->
+    <section class="products-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fade-up">Complete Product Range</h2>
+                <p class="section-subtitle animate-fade-up" style="animation-delay: 0.2s;">
+                    From air pollution control to industrial furnaces, we provide comprehensive solutions
+                </p>
+            </div>
+            
+            <!-- Product Categories -->
+            <div class="product-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="all">All Products</button>
+                    <button class="tab-btn" data-category="pollution">Air Pollution Control</button>
+                    <button class="tab-btn" data-category="furnace">Furnaces</button>
+                    <button class="tab-btn" data-category="equipment">Industrial Equipment</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-detailed-grid">
+                <!-- Air Pollution Control Devices -->
+                <div class="product-detail-card animate-fade-up" data-category="pollution" id="apcd">
+                    <div class="product-image">
+                        <img src="images/products/apcd.jpg" alt="Air Pollution Control Devices" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-badge">Featured</div>
+                        <h3 class="product-title">Air Pollution Control Devices</h3>
+                        <p class="product-description">
+                            Advanced air pollution control systems designed to meet environmental compliance 
+                            standards. Our devices effectively capture and treat industrial emissions.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>High efficiency filtration</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Environmental compliance</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Custom configurations</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('apcd-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cupola Furnace -->
+                <div class="product-detail-card animate-fade-up" data-category="furnace" id="cupola">
+                    <div class="product-image">
+                        <img src="images/products/cupola-furnace.jpg" alt="Cupola Furnace" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-badge">Popular</div>
+                        <h3 class="product-title">Cupola Furnace</h3>
+                        <p class="product-description">
+                            High-efficiency cupola furnaces for foundry operations and metal melting. 
+                            Designed for optimal performance and energy efficiency.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Energy efficient design</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>High temperature capability</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Durable construction</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('cupola-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blower -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="blower">
+                    <div class="product-image">
+                        <img src="images/products/blower.jpg" alt="Industrial Blower" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Industrial Blower</h3>
+                        <p class="product-description">
+                            High-performance industrial blowers for optimal air circulation and ventilation 
+                            in industrial applications.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>High airflow capacity</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Low noise operation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Easy maintenance</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('blower-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- I.D. Fan -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="id-fan">
+                    <div class="product-image">
+                        <img src="images/products/id-fan.jpg" alt="I.D. Fan" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">I.D. Fan (Induced Draft Fan)</h3>
+                        <p class="product-description">
+                            Induced draft fans designed for efficient exhaust and ventilation systems 
+                            in industrial applications.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>High efficiency motor</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Corrosion resistant</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Variable speed control</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('id-fan-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oil Storage Tank -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="oil-tank">
+                    <div class="product-image">
+                        <img src="images/products/oil-storage-tank.jpg" alt="Oil Storage Tank" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Oil Storage Tank</h3>
+                        <p class="product-description">
+                            Secure and efficient oil storage solutions designed for industrial applications 
+                            with safety and reliability in mind.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Leak-proof design</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Safety compliance</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Custom capacities</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('oil-tank-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chimney -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="chimney">
+                    <div class="product-image">
+                        <img src="images/products/chimney.jpg" alt="Industrial Chimney" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Industrial Chimney</h3>
+                        <p class="product-description">
+                            Durable chimneys designed for industrial exhaust and ventilation systems 
+                            with weather-resistant construction.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Weather resistant</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>High temperature rated</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Modular design</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('chimney-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ladle -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="ladle">
+                    <div class="product-image">
+                        <img src="images/products/ladle.jpg" alt="Foundry Ladle" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Foundry Ladle</h3>
+                        <p class="product-description">
+                            High-quality foundry ladles for safe and efficient metal handling 
+                            in foundry operations.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Heat resistant lining</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Precision pouring</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Long service life</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('ladle-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sand Mixture Machine -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="sand-mixture">
+                    <div class="product-image">
+                        <img src="images/products/sand-mixture.jpg" alt="Sand Mixture Machine" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sand Mixture Machine</h3>
+                        <p class="product-description">
+                            Automated sand mixture machines for consistent and efficient 
+                            sand preparation in foundry operations.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Automated operation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Consistent mixing</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Easy maintenance</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('sand-mixture-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fuel Saving Device -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="fuel-saving">
+                    <div class="product-image">
+                        <img src="images/products/fuel-saving-device.jpg" alt="Fuel Saving Device" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-badge">Eco-Friendly</div>
+                        <h3 class="product-title">Fuel Saving Device</h3>
+                        <p class="product-description">
+                            Innovative fuel saving devices that optimize fuel consumption 
+                            and reduce operational costs.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Cost effective</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Easy installation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Quick ROI</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('fuel-saving-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Muller Machine -->
+                <div class="product-detail-card animate-fade-up" data-category="equipment" id="muller">
+                    <div class="product-image">
+                        <img src="images/products/muller-machine.jpg" alt="Muller Machine" class="product-img">
+                        <div class="product-overlay">
+                            <button class="view-details-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Muller Machine</h3>
+                        <p class="product-description">
+                            High-performance muller machines for efficient sand preparation 
+                            and mixing in foundry applications.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>High capacity</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Uniform mixing</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Robust construction</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Get Quote</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button class="btn btn-outline" onclick="openModal('muller-modal')">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title animate-fade-up">Need a Custom Solution?</h2>
+                <p class="cta-subtitle animate-fade-up" style="animation-delay: 0.2s;">
+                    We specialize in custom-designed industrial equipment tailored to your specific requirements
+                </p>
+                <div class="cta-buttons animate-fade-up" style="animation-delay: 0.4s;">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <span>Contact Us</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="enquiry.html" class="btn btn-outline btn-large">
+                        <span>Request Quote</span>
+                        <i class="fas fa-calculator"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Dhiman Welding Works" class="footer-logo-img">
+                        <span class="footer-logo-text">Dhiman Welding Works</span>
+                    </div>
+                    <p class="footer-description">
+                        Leading manufacturer of air pollution control devices and industrial equipment 
+                        with over 35 years of experience and excellence.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#apcd">Air Pollution Control</a></li>
+                        <li><a href="products.html#cupola">Cupola Furnace</a></li>
+                        <li><a href="products.html#blower">Blower & I.D. Fan</a></li>
+                        <li><a href="products.html#oil-tank">Oil Storage Tank</a></li>
+                        <li><a href="products.html#chimney">Chimney</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Industrial Area, Punjab, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-XXX-XXXX-XXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@sohanpalmechanical.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dhiman Welding Works. All rights reserved.</p>
+                <p>Designed with ❤️ for excellence in manufacturing</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modals -->
+    <div id="apcd-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Air Pollution Control Devices</h2>
+                <span class="close" onclick="closeModal('apcd-modal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/products/apcd.jpg" alt="Air Pollution Control Devices">
+                </div>
+                <div class="modal-text">
+                    <h3>Advanced Air Pollution Control Solutions</h3>
+                    <p>Our air pollution control devices are designed to meet the most stringent environmental regulations while providing optimal performance and efficiency.</p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>High-efficiency particulate filtration</li>
+                        <li>Custom-designed for specific applications</li>
+                        <li>Low maintenance requirements</li>
+                        <li>Compliance with environmental standards</li>
+                        <li>Energy-efficient operation</li>
+                    </ul>
+                    <h4>Applications:</h4>
+                    <ul>
+                        <li>Foundry operations</li>
+                        <li>Steel manufacturing</li>
+                        <li>Chemical processing</li>
+                        <li>Power generation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
