@@ -5,18 +5,21 @@ A modern, responsive website for Dhiman Welding Works, featuring contemporary an
 ## 🚀 Features
 
 ### Modern Design & Animations
+
 - **Smooth Animations**: Fade-in, slide, and hover effects throughout the site
 - **Interactive Elements**: Animated buttons, cards, and navigation
 - **Modern UI Components**: Gradient backgrounds, glassmorphism effects, and modern typography
 - **Responsive Design**: Mobile-first approach with perfect scaling across all devices
 
 ### Enhanced User Experience
+
 - **Intuitive Navigation**: Fixed header with smooth scrolling and active states
 - **Interactive Product Showcase**: Modal popups with detailed product information
 - **Advanced Contact Forms**: Real-time validation and user feedback
 - **FAQ Section**: Expandable accordion-style questions and answers
 
 ### Technical Features
+
 - **Performance Optimized**: Fast loading with optimized assets
 - **SEO Friendly**: Semantic HTML structure and meta tags
 - **Accessibility**: Keyboard navigation and screen reader support
@@ -24,7 +27,7 @@ A modern, responsive website for Dhiman Welding Works, featuring contemporary an
 
 ## 📁 Project Structure
 
-```
+```bash
 sohanpal-website/
 ├── index.html              # Homepage
 ├── about.html              # About Us page
@@ -44,17 +47,20 @@ sohanpal-website/
 ## 🎨 Design Highlights
 
 ### Color Scheme
+
 - **Primary**: Blue (#2563eb) - Professional and trustworthy
 - **Secondary**: Amber (#f59e0b) - Energy and innovation
 - **Accent**: Green (#10b981) - Growth and success
 - **Gradients**: Modern gradient combinations for visual appeal
 
 ### Typography
+
 - **Font Family**: Inter - Modern, clean, and highly readable
 - **Hierarchy**: Clear heading structure with proper sizing
 - **Responsive**: Scales appropriately across devices
 
 ### Animations
+
 - **Scroll Animations**: Elements animate into view as user scrolls
 - **Hover Effects**: Interactive feedback on buttons and cards
 - **Loading States**: Smooth transitions and loading indicators
@@ -83,6 +89,7 @@ sohanpal-website/
 4. **Deploy**: Upload to your web server
 
 ### Required Images
+
 - `images/logo.png` - Company logo
 - `images/about-factory.jpg` - Factory/company image
 - `images/products/` - Product images for each category
@@ -91,30 +98,35 @@ sohanpal-website/
 ## 📋 Pages Overview
 
 ### Homepage (`index.html`)
+
 - Hero section with animated elements
 - Company overview with statistics
 - Product showcase grid
 - Call-to-action sections
 
 ### About Us (`about.html`)
+
 - Company story and history
 - Mission, vision, and values
 - Quality standards and certifications
 - Team member profiles
 
 ### Products (`products.html`)
+
 - Interactive product grid with filtering
 - Detailed product modals
 - Category-based organization
 - Quote request integration
 
 ### Contact (`contact.html`)
+
 - Contact information display
 - Advanced contact form with validation
 - Interactive map placeholder
 - FAQ section
 
 ### Quote Request (`enquiry.html`)
+
 - Comprehensive quote form
 - Multi-step form sections
 - Process explanation
@@ -133,7 +145,9 @@ sohanpal-website/
 ## 🔧 Customization Guide
 
 ### Colors
+
 Update CSS variables in `style.css`:
+
 ```css
 :root {
     --primary-color: #2563eb;
@@ -144,12 +158,14 @@ Update CSS variables in `style.css`:
 ```
 
 ### Content
+
 - Update company information in HTML files
 - Replace placeholder images with actual photos
 - Modify product information and specifications
 - Update contact details and social media links
 
-### Animations
+### Animations & Effects
+
 - Adjust animation timing in CSS
 - Modify scroll trigger points in JavaScript
 - Customize hover effects and transitions
@@ -163,5 +179,5 @@ For technical support or customization requests, please contact the development 
 This project is created for Dhiman Welding Works. All rights reserved.
 
 ---
-
+This project is created for Dhiman Welding Works. All rights reserved.
 **Built with ❤️ for excellence in manufacturing**

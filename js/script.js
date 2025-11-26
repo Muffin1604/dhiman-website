@@ -1,20 +1,72 @@
-// DOM Content Loaded
+// Load shared header and footer, then initialize functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
-    initNavigation();
-    initScrollAnimations();
-    initCounterAnimations();
-    initSmoothScrolling();
-    initMobileMenu();
-    initParallaxEffects();
-    initFormHandling();
+    loadLayoutPartials().then(function() {
+        initNavigation();
+        initScrollAnimations();
+        initCounterAnimations();
+        initSmoothScrolling();
+        initMobileMenu();
+        initParallaxEffects();
+        initFormHandling();
+    });
 });
+
+// Load header/footer partials
+function loadPartial(elementId, url) {
+    const container = document.getElementById(elementId);
+    if (!container) return Promise.resolve();
+
+    return fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            container.innerHTML = html;
+        })
+        .catch(error => {
+            console.error(`Failed to load partial: ${url}`, error);
+        });
+}
+
+function setActiveNavByPage() {
+    const page = document.body.dataset.page;
+    if (!page) return;
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    const linkMap = {
+        home: 'index.html',
+        about: 'about.html',
+        products: 'products.html',
+        services: 'services.html',
+        contact: 'contact.html'
+    };
+
+    const currentHref = linkMap[page];
+    if (!currentHref) return;
+
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentHref) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+function loadLayoutPartials() {
+    return Promise.all([
+        loadPartial('site-header', 'header.html'),
+        loadPartial('site-footer', 'footer.html')
+    ]).then(function() {
+        setActiveNavByPage();
+    });
+}
 
 // Navigation functionality
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
     
+    if (!navbar) return;
+
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -23,28 +75,31 @@ function initNavigation() {
             navbar.classList.remove('scrolled');
         }
     });
-    
-    // Active link highlighting
-    window.addEventListener('scroll', function() {
-        let current = '';
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
+
+    // For multi-page layout we rely on data-page + setActiveNavByPage,
+    // so we skip scroll-based active-link logic when data-page is present.
+    if (!document.body.dataset.page) {
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}` || 
+                    (current === '' && link.getAttribute('href') === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
         });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}` || 
-                (current === '' && link.getAttribute('href') === 'index.html')) {
-                link.classList.add('active');
-            }
-        });
-    });
+    }
 }
 
 // Mobile menu functionality
