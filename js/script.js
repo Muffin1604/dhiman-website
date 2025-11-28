@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initMobileMenu();
         initParallaxEffects();
         initFormHandling();
+        initGallery();
     });
 });
 
@@ -457,6 +458,233 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Gallery functionality - Slider
+let currentSlide = 0;
+let galleryImagesArray = [];
+let autoSlideInterval = null;
+
+function initGallery() {
+    const gallerySlider = document.getElementById('gallery-slider');
+    const galleryDots = document.getElementById('gallery-dots');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+    
+    if (!gallerySlider) return;
+
+    // List of gallery images
+    galleryImagesArray = [
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.45 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.45 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.45 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.46 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.46 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.46 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.47 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.47 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.47 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.48 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.48 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.48 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.49 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.49 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.49 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.50 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.50 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.50 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.51 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.51 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.51 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.52 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.52 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.52 AM.jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.53 AM (1).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.53 AM (2).jpeg',
+        'gallery/WhatsApp Image 2025-11-05 at 11.21.53 AM.jpeg'
+    ];
+
+    // Create slides
+    galleryImagesArray.forEach((imageSrc, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'gallery-slide';
+        if (index === 0) slide.classList.add('active');
+        slide.dataset.index = index;
+        
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        img.alt = `Gallery Image ${index + 1}`;
+        img.loading = index < 3 ? 'eager' : 'lazy';
+        img.style.cursor = 'pointer';
+        
+        img.addEventListener('click', () => openGalleryModal(index, galleryImagesArray));
+        slide.appendChild(img);
+        gallerySlider.appendChild(slide);
+        
+        // Create dot
+        const dot = document.createElement('button');
+        dot.className = 'gallery-dot';
+        if (index === 0) dot.classList.add('active');
+        dot.dataset.index = index;
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        galleryDots.appendChild(dot);
+    });
+
+    // Navigation buttons
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => previousSlide());
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => nextSlide());
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (gallerySlider.parentElement.offsetParent !== null) {
+            if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        }
+    });
+
+    // Auto-play slider
+    startAutoSlide();
+
+    // Pause on hover
+    gallerySlider.addEventListener('mouseenter', stopAutoSlide);
+    gallerySlider.addEventListener('mouseleave', startAutoSlide);
+}
+
+function goToSlide(index) {
+    const slides = document.querySelectorAll('.gallery-slide');
+    const dots = document.querySelectorAll('.gallery-dot');
+    
+    if (index < 0) {
+        currentSlide = galleryImagesArray.length - 1;
+    } else if (index >= galleryImagesArray.length) {
+        currentSlide = 0;
+    } else {
+        currentSlide = index;
+    }
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentSlide);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+    });
+}
+
+function nextSlide() {
+    goToSlide(currentSlide + 1);
+}
+
+function previousSlide() {
+    goToSlide(currentSlide - 1);
+}
+
+function startAutoSlide() {
+    stopAutoSlide(); // Clear any existing interval
+    autoSlideInterval = setInterval(() => {
+        nextSlide();
+    }, 2500); // Change slide every 4 seconds
+}
+
+function stopAutoSlide() {
+    if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+    }
+}
+
+// Gallery modal functionality
+let currentImageIndex = 0;
+
+function openGalleryModal(index, images) {
+    currentImageIndex = index;
+    
+    // Create or get modal
+    let modal = document.getElementById('gallery-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'gallery-modal';
+        modal.className = 'gallery-modal';
+        modal.innerHTML = `
+            <div class="gallery-modal-content">
+                <span class="gallery-modal-close">&times;</span>
+                <div class="gallery-modal-nav gallery-modal-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <img id="gallery-modal-img" src="" alt="Gallery Image">
+                <div class="gallery-modal-nav gallery-modal-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        
+        // Event listeners
+        modal.querySelector('.gallery-modal-close').addEventListener('click', closeGalleryModal);
+        modal.querySelector('.gallery-modal-prev').addEventListener('click', () => navigateGallery(-1));
+        modal.querySelector('.gallery-modal-next').addEventListener('click', () => navigateGallery(1));
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeGalleryModal();
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', handleGalleryKeyboard);
+    }
+    
+    updateGalleryModal(images);
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            if (modal.parentNode) {
+                modal.parentNode.removeChild(modal);
+            }
+        }, 300);
+    }
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', handleGalleryKeyboard);
+}
+
+function navigateGallery(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) {
+        currentImageIndex = galleryImagesArray.length - 1;
+    } else if (currentImageIndex >= galleryImagesArray.length) {
+        currentImageIndex = 0;
+    }
+    updateGalleryModal();
+}
+
+function updateGalleryModal(images) {
+    const modalImg = document.getElementById('gallery-modal-img');
+    const imagesToUse = images || galleryImagesArray;
+    if (modalImg && imagesToUse && imagesToUse[currentImageIndex]) {
+        modalImg.src = imagesToUse[currentImageIndex];
+    }
+}
+
+function handleGalleryKeyboard(e) {
+    if (e.key === 'Escape') {
+        closeGalleryModal();
+    } else if (e.key === 'ArrowLeft') {
+        navigateGallery(-1);
+    } else if (e.key === 'ArrowRight') {
+        navigateGallery(1);
+    }
+}
 
 // Export functions for potential external use
 window.SohanpalWebsite = {
