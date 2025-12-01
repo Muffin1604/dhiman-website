@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', initLazyLoading);
 // Performance optimization: Preload critical resources
 function preloadCriticalResources() {
     const criticalImages = [
-        'images/logo.png',
+        'images/LOGO.svg',
         'images/about-factory.jpg'
     ];
     

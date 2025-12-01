@@ -90,7 +90,7 @@ sohanpal-website/
 
 ### Required Images
 
-- `images/logo.png` - Company logo
+- `images/LOGO.svg` - Company logo
 - `images/about-factory.jpg` - Factory/company image
 - `images/products/` - Product images for each category
 - `images/team/` - Team member photos
