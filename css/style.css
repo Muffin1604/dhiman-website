@@ -950,24 +950,6 @@ p {
     margin-bottom: 1rem;
 }
 
-.footer-logo-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-}
-
-.footer-logo-text {
-    color: #111827;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
-.footer-description {
-    color: #111827;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
 .social-links {
     display: flex;
     gap: 1rem;
