@@ -529,17 +529,6 @@ function initFormValidation() {
     document.head.appendChild(style);
 }
 
-// Map interaction
-function initMapInteraction() {
-    const mapPlaceholder = document.querySelector('.map-placeholder');
-    
-    if (mapPlaceholder) {
-        mapPlaceholder.addEventListener('click', function() {
-            // Open Google Maps in new tab
-            window.open('https://maps.google.com', '_blank');
-        });
-    }
-}
 
 // Export functions for global use
 window.validateForm = validateForm;

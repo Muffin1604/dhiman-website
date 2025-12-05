@@ -55,7 +55,8 @@ function setActiveNavByPage() {
 function loadLayoutPartials() {
     return Promise.all([
         loadPartial('site-header', 'header.html'),
-        loadPartial('site-footer', 'footer.html')
+        loadPartial('site-footer', 'footer.html'),
+        loadPartial('site-gallery', 'gallery.html')
     ]).then(function() {
         setActiveNavByPage();
     });
