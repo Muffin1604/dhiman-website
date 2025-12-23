@@ -33,7 +33,7 @@ sohanpal-website/
 ├── about.html              # About Us page
 ├── products.html           # Products showcase
 ├── contact.html            # Contact page with form
-├── enquiry.html            # Quote request form
+├── contact.html            # Quote request form
 ├── css/
 │   └── style.css          # Main stylesheet with animations
 ├── js/
@@ -125,7 +125,7 @@ sohanpal-website/
 - Interactive map placeholder
 - FAQ section
 
-### Quote Request (`enquiry.html`)
+### Quote Request (`contact.html`)
 
 - Comprehensive quote form
 - Multi-step form sections

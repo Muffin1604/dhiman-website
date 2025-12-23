@@ -266,7 +266,7 @@ function createProductModal(product) {
                             <span>Get Quote</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="enquiry.html" class="btn btn-outline">
+                        <a href="contact.html" class="btn btn-outline">
                             <span>Request Information</span>
                             <i class="fas fa-info-circle"></i>
                         </a>
