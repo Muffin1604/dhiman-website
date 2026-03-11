@@ -1155,6 +1155,24 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        height: 70px;
+        padding: 0 16px;
+    }
+
+    .logo-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -1221,6 +1239,16 @@ p {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .form-container {
+        position: static;
+        top: auto;
+        box-shadow: var(--shadow-md);
     }
 
     .footer-content {
@@ -1330,6 +1358,10 @@ p {
         width: 40px;
         height: 40px;
         font-size: 2rem;
+    }
+
+    .map-wrapper {
+        height: 320px;
     }
 
     /* Products page responsive */
@@ -2282,7 +2314,7 @@ p {
 
 .story-img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: var(--shadow-xl);
